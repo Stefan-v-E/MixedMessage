@@ -1,50 +1,29 @@
-// my code will go here
-// If program is being run - a random message should be generated. The message should be made of three different parts
-// I choose to make it give you inspiration quotes
+// Generates a place, event and time. Will return a mixed message forecasting what will happen in the world.
 
-// could make a function for each part, roll the dice, make a switch function to determine and push
-
-const sentgen = ['I will become a factory function :)']
+const placegen = () => {
+    let placearray = ['Tibet', 'Belgium', 'Bangladesh', 'France', 'Guatamala', 'Belarus', 'Montenegro']
+    const place = placearray[Math.floor(Math.random()*placearray.length)]
+    return place
+}  
+    
+const eventgen= () => {
+    let eventarray = ['an earthquake', 'a famine', 'a glacial storm', 'huge manatees everywhere', 'a volcano eruption', 'extremely bad weather']
+    const event = eventarray[Math.floor(Math.random()*eventarray.length)]
+    return event
+}
 
 const timegen = () => {
-    let time = ['Today', 'Tomorrow'] //, 'An eternity later', 'This week', 'This year']
-    let picktime = time[Math.floor(Math.random()*time.length)]
-    console.log(picktime)
-  
-    
-const subject = () => {
-    let subject = ['you', 'mankind', 'life']
-    let picksubject = time[Math.floor(Math.random()*subject.length)]
-    console.log(picksubject)
+    let timearray = ['tomorrow', 'next week', 'this month', 'in 2021', 'in 2022', 'in 2023', 'in 2024', 'in 2025', 'in 2026']
+    const time = timearray[Math.floor(Math.random()*timearray.length)]
+    return time
 }
 
-const action = () => {
-    let action = []
+const sentgen = () => {
+    let place = placegen();
+    let event = eventgen();
+    let time = timegen();
+    console.log('Dear visitor - you asked me what will happen in the world. \nBLEEP-BLOOP-BOINK\nI see... there will be ' + event + ' in ' + place + ' ' + time + '.')
 }
 
 
-timegen();
-timegen();
-timegen();
-
-/*
-    switch(picktime) {
-        case time[0]:
-        case time[1]:
-            let option = Math.floor(Math.random()*3);
-            console.log('Generated option is ' + option)
-            if (option === 0) {
-                console.log('you')
-            } else if (option === 1) {
-                console.log('mankind')
-            } else {
-                console.log('life')
-            }
-            //push
-            break;
-
-        default:
-            console.log('Something else was found')
-    }
-}
-*/
+sentgen();

@@ -1,6 +1,5 @@
 # General information
-This script will produce a random message 
-*and was made as part of Codecademy's Fullstack path projects*
+This a simple script that will produce a random forecast when run. This project is called **Mixed Messages** and is part of *Codecademy's FullStack-track*. My main goal was to get used to working with Git/GitHUB, JavaScript and Markdown.
 
 # Technologies
 Javascript
@@ -8,8 +7,7 @@ Node
 Git/GitHUB
 Visual Studio Code
 
-# Setup
-To run this project, install it locally using node and the file local:
-
-$ cd ../folder
-$ node MixedMessage.js
+# How to run this script
+To run this project, download the respository to your computer.
+1. Download Node.js
+2. Using a CLI like Command Prompt, navigate to the directory where "MixedMessage.js" is located, then run the command node main.js.
